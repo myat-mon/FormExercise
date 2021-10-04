@@ -81,7 +81,7 @@ body {
   border: 2px solid #7879f1;
   border-radius: 5px;
 }
-#checked-mail {
+#checked-mail,#phone-length,#UpperCase,#Japanese-moji {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border: 1px solid red;
