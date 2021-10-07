@@ -93,8 +93,7 @@
             </div>
             <div class="col s7 m7 18">
               <input type="email" id="mail" placeholder="contact@mail.com" required>
-              <span id="UpperCase" style="display: none;">Mail should be small letters</span>
-              <span id="Japanese-moji" style="display: none;">Mail should be english letters</span>
+              <span id="valid-mail" style="display: none;">Mail is not valid</span>
             </div>
           </div>
           <!--For Phone｜ここまで-->
@@ -197,33 +196,18 @@
       }
     }
 
+
+
     var mail = document.getElementById("mail");
-    var retypemail = document.getElementById("retype-mail");
-    var checkedmail = document.getElementById("checked-mail");
+    var mailFormact = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
 
-    retypemail.onfocus = function () {
-      checkedmail.style.display = "block";
-    }
-    retypemail.onblur = function () {
-      checkedmail.style.display = "none";
-    }
     mail.onkeyup = function () {
-      var upperCaseLetters = /[A-Z]/g;
-      if (mail.value.match(upperCaseLetters)) {
-        document.getElementById("UpperCase").style.display = "block";
+      if (mail.value.match(mailFormact)) {
+        document.getElementById("valid-mail").style.display = "none";
       } else {
-        document.getElementById("UpperCase").style.display = "none";
+        document.getElementById("valid-mail").style.display = "block";
       }
-
-      var Japanese = /[あ-を]/g;
-      if (mail.value.match(Japanese)) {
-        document.getElementById("Japanese-moji").style.display = "block";
-      } else {
-        document.getElementById("Japanese-moji").style.display = "none";
-      }
-
     }
-
 
     function myFunction() {
 

@@ -73,7 +73,8 @@ body {
   border-radius: 5px;
 }
 #mail,
-#retype-mail,#level {
+#retype-mail,
+#level {
   width: 100%;
   background-color: #fff;
   padding: 0.1rem 0.75rem;
@@ -81,7 +82,10 @@ body {
   border: 2px solid #7879f1;
   border-radius: 5px;
 }
-#checked-mail,#phone-length,#UpperCase,#Japanese-moji {
+#checked-mail,
+#phone-length,
+#valid-mail,
+#phone-valid {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border: 1px solid red;
